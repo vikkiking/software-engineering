@@ -1,1 +1,2 @@
-pypinyin==0.42.0
+pypinyin
+memory_profiler

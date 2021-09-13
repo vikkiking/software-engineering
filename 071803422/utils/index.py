@@ -17,10 +17,7 @@ hc = HanziChaizi()
 
 
 def div(x):  # 拆分汉字
-    v = hc.query(x)
-    if isinstance(v, list):
-        return v[0] if len(v) == 1 else v[1]
-    return v
+    return hc.query(x)
 
 
 def getPY(x):  # 获取汉字拼音

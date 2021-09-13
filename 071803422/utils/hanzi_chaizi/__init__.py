@@ -11,11 +11,10 @@ class HanziChaizi(object):
             self.data = pickle.load(fd)
 
     def query(self, input_char, default=None):
-        result = self.data.get(input_char, default)
-        '''if len(result)>1:
-            return result[1]
-        return result[0]'''
-        return result
+        res = self.data.get(input_char, default)
+        if res and input_char == res[0][0]:
+            return []
+        return res
 
 
 if __name__ == "__main__":
