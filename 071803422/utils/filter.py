@@ -159,7 +159,7 @@ class Filter(object):
                     st_ptr_org = i
                     func()
                 i += 1
-        with open(ans_path, 'w') as res_txt:
+        with open(ans_path, 'w',encoding='UTF-8') as res_txt:
             res_txt.write(f'Total: {len(res)}')
             for x in res:
                 res_txt.write(x)
