@@ -59,14 +59,14 @@ class Filter(object):
             self.ml.clear()'''
 
     def parse(self, path):
-        with open(path, 'r') as words:
+        with open(path, 'r',encoding='UTF-8') as words:
             self.words = words.read().split('\n')
             for i in range(len(self.words)):
                 self.add(i, 0, self.trees)
 
     def filter(self, words_path, org_path, ans_path):
         self.parse(words_path)
-        # with open('tree.json', 'w')as f:
+        # with open('tree.json', 'w',encoding='UTF-8')as f:
         #     f.write(json.dumps(self.trees, ensure_ascii=False))
         st_ptr_org = 0
         flag = True  # 是否还未找到新敏感词的第一个字
@@ -74,7 +74,7 @@ class Filter(object):
         wait = -1
         line = 1
         i = 0
-        with open(org_path, 'r') as org_txt:
+        with open(org_path, 'r',encoding='UTF-8') as org_txt:
             org_txt = org_txt.read()
             root = self.trees
 
