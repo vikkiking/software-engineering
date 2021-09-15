@@ -15,10 +15,3 @@ class HanziChaizi(object):
         if res and input_char == res[0][0]:
             return []
         return res
-
-
-if __name__ == "__main__":
-    hc = HanziChaizi()
-    result = hc.query('名')
-
-    print(result)
