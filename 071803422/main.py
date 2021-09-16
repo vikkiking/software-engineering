@@ -1,7 +1,6 @@
 import sys
 from utils.filter import Filter
 
-
 # from memory_profiler import profile
 
 
