@@ -103,7 +103,10 @@ class Filter(object):
                                         i = index - 1
                                     break
                                 if index == len(org_txt) - 1:
-                                    i = index
+                                    if 'word' not in root:
+                                        root = temp
+                                    else:
+                                        i = index
                         res.append(
                             f'\nLine{line}: <{self.words[root["word"]]}> {org_txt[st_ptr_org:i + 1]}')
                         flag = True
