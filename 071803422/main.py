@@ -9,7 +9,7 @@ def main(argv):
     if len(argv) != 3:
         print('参数多于或少于三个！')
         exit(0)
-    org_path, words_path, ans_path = argv
+    words_path, org_path, ans_path = argv
     sw_tree = Filter()
     sw_tree.filter(words_path, org_path, ans_path)
 
